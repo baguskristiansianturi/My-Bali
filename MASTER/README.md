@@ -9,7 +9,7 @@ This directory is the internal source of truth for My Bali's product and busines
 - [Product Roadmap](ROADMAP.md)
 - [Decision and status rules](DECISION-GOVERNANCE.md)
 
-## Detailed product documents
+## Detailed product documents\n- [Public web, account, and community MVP](PRODUCTS/MY-BALI/PUBLIC-WEB-AND-COMMUNITY-MVP.md)
 - [Product concept](PRODUCTS/MY-BALI/PRODUCT-CONCEPT.md)
 - [Provider ecosystem, transport operations, and verification](PRODUCTS/MY-BALI/PROVIDER-ECOSYSTEM.md)
 - [UI/UX and service experience foundations](PRODUCTS/MY-BALI/UI-UX-FOUNDATIONS.md)
