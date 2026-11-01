@@ -11,7 +11,8 @@ This directory is the internal source of truth for My Bali's product and busines
 
 ## Detailed product documents
 - [Product concept](PRODUCTS/MY-BALI/PRODUCT-CONCEPT.md)
-- [Provider ecosystem](PRODUCTS/MY-BALI/PROVIDER-ECOSYSTEM.md)
+- [Provider ecosystem, transport operations, and verification](PRODUCTS/MY-BALI/PROVIDER-ECOSYSTEM.md)
+- [UI/UX and service experience foundations](PRODUCTS/MY-BALI/UI-UX-FOUNDATIONS.md)
 - [Travel journey and social experience](PRODUCTS/MY-BALI/TRAVEL-JOURNEY.md)
 - [Route intelligence](PRODUCTS/MY-BALI/ROUTE-INTELLIGENCE.md)
 - [Open questions](PRODUCTS/MY-BALI/OPEN-QUESTIONS.md)
