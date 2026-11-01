@@ -99,3 +99,14 @@ A physical Bali office is a possible future trust and operations asset for onboa
 - Sponsored placements and their labeling.
 - Customer support and physical-office operating costs.
 - Unit economics by product family and launch territory.
+
+## 12. Social discovery and ecosystem value
+
+The founder's direction is for My Bali to operate as a social-media-first platform with the Bali provider ecosystem integrated into the social experience. The feed is not merely a promotional catalogue. People can publish general permitted photo/video content, trip stories, and everyday Bali content, while genuine businesses can publish updates, collections, offers, and service information through their own profiles.
+
+Social discovery can connect attention to real local value: a post about a cafe can lead to its verified business page, current menu, offer, reservation or order flow; a fashion post can lead to an eligible product and verified Bali store; a destination or Trip post can lead to relevant local services. Sponsored placements, if introduced, must be clearly labeled and must not masquerade as ordinary community recommendations.
+
+Trip has a planning and an experience role. Bali Plan lets people share intended itineraries, hotels, destinations, interests, and estimated budgets before travel. Actual Trip Experience content should be distinguished from plans and, where available, linked to eligible system/provider records. A plan is not a booking, and a post is not proof of a completed transaction.
+
+This social layer may create provider discovery and repeat engagement, but its commercial value, moderation cost, content supply, retention, and conversion must be validated. Social engagement should not be treated as guaranteed revenue or as a substitute for provider quality and transaction fulfillment.
+
