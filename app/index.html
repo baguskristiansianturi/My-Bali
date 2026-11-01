@@ -47,6 +47,52 @@
 }
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Explore: visual-first discovery grid */
+.explore-wrap{padding-bottom:34px}
+.explore-heading{display:flex;align-items:end;justify-content:space-between;gap:14px}
+.explore-heading .sort{min-width:135px}
+.explore-filters{display:flex;gap:8px;overflow-x:auto;padding:0 0 15px;scrollbar-width:none}
+.explore-filters::-webkit-scrollbar{display:none}
+.explore-filters button{flex:0 0 auto;border:1px solid var(--line);border-radius:30px;background:#fff;padding:8px 13px;font-size:11px;color:#607078;white-space:nowrap}
+.explore-filters button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.explore-meta{display:flex;justify-content:space-between;gap:10px;color:#899499;font-size:10px;padding:1px 1px 11px}
+.visual-discovery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;align-items:start;padding-bottom:12px}
+.explore-post{position:relative;display:block;width:100%;padding:0;border:0;border-radius:12px;overflow:hidden;background:#e8eeee;text-align:left;break-inside:avoid;min-width:0}
+.explore-post img{display:block;width:100%;height:auto;min-height:155px;max-height:390px;object-fit:cover;transition:transform .25s ease}
+.explore-post:hover img{transform:scale(1.025)}
+.explore-post:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#101b20b8);pointer-events:none}
+.explore-overlay{position:absolute;z-index:1;left:10px;right:9px;bottom:9px;color:white}
+.explore-overlay strong{display:block;font-size:11px;line-height:1.3;text-shadow:0 1px 4px #0008}
+.explore-overlay small{display:block;font-size:9px;opacity:.9;margin-top:3px}
+.explore-type{position:absolute;z-index:2;top:8px;left:8px;border-radius:20px;padding:4px 7px;background:#ffffffdf;color:#34474e;font-size:8px;font-weight:800}
+.explore-popularity{position:absolute;z-index:2;top:8px;right:8px;border-radius:20px;padding:4px 7px;background:#1f3039a8;color:#fff;font-size:8px}
+.explore-disclaimer{font-size:10px;line-height:1.5;color:#899499;margin:4px 1px 22px}
+.explore-detail-media{width:100%;max-height:370px;object-fit:cover;border-radius:12px;display:block;margin-bottom:13px}
+.explore-detail-copy{font-size:13px;line-height:1.6;color:#4f5e64;white-space:pre-wrap}
+.explore-detail-source{font-size:10px;color:var(--blue-dark);font-weight:750;margin:0 0 7px}
+.explore-detail-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+@media(max-width:850px){.visual-discovery{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}}
+@media(max-width:560px){
+ .explore-wrap{padding-left:8px;padding-right:8px}
+ .explore-heading{align-items:center;padding-top:18px}
+ .explore-heading h1{font-size:22px}
+ .explore-heading p{font-size:10px;max-width:235px}
+ .explore-heading .sort{font-size:10px;min-width:112px;padding:7px 6px}
+ .explore-filters{padding-bottom:12px;gap:6px}
+ .explore-filters button{font-size:10px;padding:7px 11px}
+ .explore-meta{font-size:9px;padding-bottom:8px}
+ .visual-discovery{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+ .explore-post{border-radius:8px}
+ .explore-post img{min-height:145px;max-height:310px}
+ .explore-overlay{left:7px;right:6px;bottom:7px}
+ .explore-overlay strong{font-size:10px}
+ .explore-overlay small{font-size:8px}
+ .explore-type,.explore-popularity{top:6px;padding:3px 6px;font-size:7px}
+ .explore-type{left:6px}.explore-popularity{right:6px}
+ .explore-disclaimer{font-size:9px;padding:0 2px}
+}
+
 </style>
 </head>
 <body>
@@ -81,12 +127,14 @@
 <article class="tile"><div class="tile-visual">◌</div><div class="tile-body"><small>CONTOH BALI PLAN · DEMO</small><h3>North Bali Escape</h3><p>Rencana perjalanan ke Bali Utara dengan estimasi waktu dan beberapa tempat pilihan.</p><button data-action="trip-detail">Lihat rencana</button></div></article>
 <article class="tile"><div class="tile-visual">＋</div><div class="tile-body"><small>MULAI DARI IDE ANDA</small><h3>Buat Bali Plan</h3><p>Susun tanggal, hotel, destinasi, estimasi biaya, dan itinerary Anda sendiri.</p><button class="btn" data-action="create-trip">Buat rencana</button></div></article>
 </div><div id="tripExperiences" class="hidden"><div class="card empty-state">◎<b>Trip Experience</b><p>Pengalaman perjalanan akan dipisahkan dari rencana. Bukti kunjungan atau transaksi hanya akan ditampilkan jika ada catatan pendukung yang sesuai.</p><button class="btn secondary" data-action="create-post">Bagikan pengalaman</button></div></div><div id="tripSaved" class="hidden"><div class="card empty-state">♡<b>Belum ada Trip tersimpan</b><p>Simpan Bali Plan yang menarik setelah masuk ke akun.</p><button class="btn secondary" data-auth="save-trip">Masuk untuk menyimpan</button></div></div></div></section>
-<section class="page" id="explorePage"><div class="wrap"><div class="page-header"><h1>Explore Bali</h1><p>Temukan bisnis, layanan, destinasi, dan aktivitas dari ekosistem lokal.</p></div><div class="subnav"><button class="active" data-explore="all">Semua</button><button data-explore="food">Food</button><button data-explore="transport">Transport</button><button data-explore="services">Layanan</button><button data-explore="places">Destinasi</button></div><div class="explore-grid">
-<article class="tile"><div class="tile-visual">⌂</div><div class="tile-body"><small>MY BALI FOOD</small><h3>Kuliner & tempat makan</h3><p>Warung, restoran, kafe, dan usaha kuliner lokal.</p><button data-action="demo-info">Jelajahi kategori</button></div></article>
-<article class="tile"><div class="tile-visual">↗</div><div class="tile-body"><small>MY BALI TAXI</small><h3>Transportasi Bali</h3><p>Temukan pilihan transportasi dan operator yang terdaftar.</p><button data-action="demo-info">Jelajahi kategori</button></div></article>
-<article class="tile"><div class="tile-visual">✳</div><div class="tile-body"><small>MY BALI SERVICES</small><h3>Layanan sehari-hari</h3><p>Kurir, spa, kebutuhan rumah, dan layanan lokal lainnya.</p><button data-action="demo-info">Jelajahi kategori</button></div></article>
-<article class="tile"><div class="tile-visual">⌖</div><div class="tile-body"><small>MY BALI TRIP</small><h3>Destinasi & aktivitas</h3><p>Temukan tempat menarik dan aktivitas di berbagai wilayah Bali.</p><button data-action="demo-info">Jelajahi kategori</button></div></article>
-</div><div class="card empty-state"><b>Direktori bisnis akan diisi secara terkurasi</b><p>Daftar penyedia nyata, lokasi, harga, dan ketersediaan belum aktif pada prototipe ini. Kami tidak menampilkan bisnis atau ulasan fiktif.</p></div></div></section>
+<section class="page" id="explorePage"><div class="wrap explore-wrap">
+<div class="page-header explore-heading"><div><h1>Explore</h1><p>Temukan cerita, gaya hidup, tempat, dan bisnis dari seluruh Bali.</p></div><select id="exploreSort" class="sort" aria-label="Urutkan Explore"><option value="recommended">Untuk Anda</option><option value="popular">Populer</option><option value="latest">Terbaru</option></select></div>
+<div class="explore-filters" role="group" aria-label="Filter konten Explore"><button class="active" data-explore="all">Semua</button><button data-explore="community">Komunitas</button><button data-explore="business">Bisnis lokal</button><button data-explore="destination">Destinasi</button><button data-explore="trip">Trip & Plan</button></div>
+<div class="explore-meta"><span>Jelajahi unggahan publik</span><span id="exploreCount">Konten contoh · Demo</span></div>
+<div id="exploreGrid" class="explore-grid visual-discovery"></div>
+<div class="card empty-state hidden" id="exploreEmpty"><b>Belum ada konten di kategori ini</b><p>Konten publik akan muncul di sini saat komunitas My Bali mulai berbagi.</p></div>
+<p class="explore-disclaimer">Konten contoh untuk pengujian tampilan. Urutan popularitas dan rekomendasi pada prototipe ini belum menggunakan data pengguna atau algoritma produksi.</p>
+</div></section>
 <section class="page" id="shoppingPage"><div class="wrap"><div class="page-header"><h1>Shopping</h1><p>Pengalaman katalog belanja yang terhubung dengan toko nyata di Bali.</p></div><div class="subnav"><button class="active" data-shop="all">Pilihan</button><button data-shop="souvenir">Oleh-oleh</button><button data-shop="fashion">Fashion</button></div><div class="shop-grid">
 <article class="tile"><div class="tile-visual">✳</div><div class="tile-body"><small>MY BALI SHOPPING</small><h3>Oleh-oleh & kerajinan</h3><p>Produk Bali, karya, ornamen, pakaian, dan hadiah dari bisnis terverifikasi.</p><button data-action="demo-info">Lihat katalog</button></div></article>
 <article class="tile"><div class="tile-visual">◇</div><div class="tile-body"><small>MY BALI SHOPPING</small><h3>Fashion</h3><p>Brand fashion lokal maupun internasional dari penjual dengan usaha nyata di Bali.</p><button data-action="demo-info">Lihat katalog</button></div></article>
@@ -97,6 +145,7 @@
 <div class="modal-backdrop" id="composerModal"><div class="modal"><div class="modal-head"><h2 id="composerTitle">Buat postingan</h2><button class="close" data-close="composerModal">×</button></div><label for="postText">Ceritakan sesuatu</label><textarea id="postText" placeholder="Apa yang ingin Anda bagikan?"></textarea><label for="postSurface">Bagikan ke</label><select id="postSurface"><option value="feed">Feed utama</option><option value="status">Status / Stories saja</option><option value="trip">Trip / Bali Plan</option></select><label for="postType">Jenis konten</label><select id="postType"><option value="general">Cerita umum</option><option value="trip-plan">Trip Plan (rencana)</option><option value="experience">Trip Experience (pengalaman)</option></select><label for="postAudience">Siapa yang dapat melihat?</label><select id="postAudience"><option value="public">Publik</option><option value="followers">Pengikut (demo)</option><option value="private">Hanya saya (demo)</option></select><label class="file-label" for="mediaFile">＋ Tambah foto / video</label><input id="mediaFile" type="file" accept="image/*,video/mp4,video/webm,video/quicktime"><img id="mediaPreview" class="preview hidden" alt="Pratinjau media"><div class="modal-actions"><span class="muted">Gunakan media milik sendiri atau yang Anda punya izin untuk bagikan.</span><button class="btn" id="publishBtn">Bagikan</button></div></div></div>
 <div class="modal-backdrop" id="authModal"><div class="modal"><div class="modal-head"><h2>Masuk ke My Bali</h2><button class="close" data-close="authModal">×</button></div><div class="auth-hint">Mode prototype: profil demo hanya tersimpan di browser ini. Ini bukan autentikasi sungguhan dan belum tersinkron antarperangkat.</div><label for="demoName">Nama tampilan</label><input id="demoName" placeholder="Nama Anda"><label for="demoArea">Wilayah (opsional)</label><input id="demoArea" placeholder="Contoh: Denpasar, Bali"><div class="modal-actions"><span class="muted">Bisa dijelajahi sebagai tamu tanpa login.</span><button class="btn" id="continueLogin">Lanjutkan demo</button></div></div></div>
 <div class="modal-backdrop" id="storyModal"><div class="modal"><div class="modal-head"><h2 id="storyTitle">Stories</h2><button class="close" data-close="storyModal">×</button></div><p class="muted">Stories / Status adalah ruang berbagi singkat yang terpisah dari feed utama. Rencana Trip dapat dibagikan ke sini tanpa otomatis muncul di Feed.</p><button class="btn secondary" id="sharePlanStory">Bagikan Trip Plan ke Status</button></div></div>
+<div class="modal-backdrop" id="exploreDetailModal"><div class="modal"><div class="modal-head"><h2 id="exploreDetailTitle">Detail konten</h2><button class="close" data-close="exploreDetailModal">×</button></div><img id="exploreDetailImage" class="explore-detail-media" alt=""><p id="exploreDetailSource" class="explore-detail-source"></p><div id="exploreDetailCopy" class="explore-detail-copy"></div><div class="explore-detail-actions"><button class="btn" id="exploreInternalLink">Buka halaman terkait</button><button class="btn secondary" id="exploreDetailProfile">Lihat profil</button></div><p class="muted" style="margin-top:12px">Konten contoh · Demo. Tautan ini mensimulasikan hubungan konten dengan halaman internal My Bali.</p></div></div>
 <div id="toast" class="toast hidden" role="status"></div>
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -105,12 +154,43 @@ const demoPosts=[
 {id:2,user:"Cerita Pulau",initial:"C",time:"Contoh konten · Demo",kind:"Komunitas",type:"community",text:"Tidak semua cerita harus tentang liburan. Bisa tentang sudut kota, kegiatan sehari-hari, karya, makanan, atau hal kecil yang ingin dibagikan.",surface:"feed",media:"",likes:12,location:"Bali",demo:true},
 {id:3,user:"Trip Journal",initial:"T",time:"Contoh Trip Plan · Demo",kind:"Trip Plan",type:"trip",text:"Rencana akhir pekan: mulai dari Denpasar, singgah di Ubud, lalu menghabiskan sore di sekitar area persawahan. Ini masih rencana perjalanan, bukan catatan kunjungan.",surface:"feed",media:"",likes:9,location:"Bali Plan · Rencana",demo:true}
 ];
-let posts=[...demoPosts],currentUser=null,activeFilter="all",pendingAuthAction=null,selectedFile=null,storyName="";
+const exploreItems=[
+{id:101,creator:"Ayu Pratiwi",source:"Pengguna · Komunitas",type:"community",label:"Komunitas",caption:"Sore yang tenang di tepi pantai. Kadang perjalanan terbaik adalah berhenti sebentar dan menikmati suasana.",image:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=82",ratio:"tall",pop:92,target:"profile",targetLabel:"Lihat profil"},
+{id:102,creator:"Bali Coffee House",source:"Bisnis lokal · Demo",type:"business",label:"Bisnis lokal",caption:"Sudut kecil untuk menikmati kopi dan memulai pagi. Nantinya unggahan bisnis dapat terhubung langsung ke profil toko, menu, dan pemesanan.",image:"https://images.unsplash.com/photo-1442512595367-9720aa1c123a?auto=format&fit=crop&w=900&q=82",ratio:"square",pop:98,target:"shopping",targetLabel:"Lihat toko"},
+{id:103,creator:"Explore North Bali",source:"Destinasi · Demo",type:"destination",label:"Destinasi",caption:"Lanskap Bali Utara untuk inspirasi perjalanan berikutnya. Buka detail tempat untuk melihat informasi dan aktivitas terkait.",image:"https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=82",ratio:"tall",pop:96,target:"trip",targetLabel:"Jelajahi Trip"},
+{id:104,creator:"Made in Bali",source:"Toko · Demo",type:"business",label:"Bisnis lokal",caption:"Kerajinan dan karya lokal yang punya cerita. Konten produk dapat diarahkan ke katalog dan halaman toko di My Bali.",image:"https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=900&q=82",ratio:"square",pop:78,target:"shopping",targetLabel:"Lihat koleksi"},
+{id:105,creator:"Nadia's Travel Notes",source:"Pengguna · Trip Plan",type:"trip",label:"Trip Plan",caption:"Rencana perjalanan 3 hari di Bali: pantai, kuliner, dan beberapa tempat yang ingin dikunjungi. Ini adalah rencana, bukan bukti kunjungan.",image:"https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=82",ratio:"tall",pop:89,target:"trip",targetLabel:"Buka Bali Plan"},
+{id:106,creator:"Bali Food Stories",source:"Pengguna · Komunitas",type:"community",label:"Komunitas",caption:"Momen makan siang dan cerita sederhana hari ini. Postingan personal tidak harus memiliki tautan transaksi.",image:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=82",ratio:"square",pop:84,target:"profile",targetLabel:"Lihat profil"},
+{id:107,creator:"Island Style Bali",source:"Toko fashion · Demo",type:"business",label:"Bisnis lokal",caption:"Inspirasi gaya dan koleksi fashion. Dari unggahan ini pengguna dapat menuju produk atau profil penjual yang terdaftar.",image:"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=82",ratio:"tall",pop:81,target:"shopping",targetLabel:"Lihat fashion"},
+{id:108,creator:"Bali Weekend Plan",source:"Trip · Demo",type:"trip",label:"Trip Plan",caption:"Ide perjalanan akhir pekan untuk disimpan dan disesuaikan dengan waktu, lokasi menginap, dan minat masing-masing.",image:"https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=82",ratio:"square",pop:73,target:"trip",targetLabel:"Lihat Trip"}
+];
+let posts=[...demoPosts],currentUser=null,activeFilter="all",exploreFilter="all",exploreSort="recommended",pendingExploreItem=null,pendingAuthAction=null,selectedFile=null,storyName="";
 function toast(msg){const el=$("#toast");el.textContent=msg;el.classList.remove("hidden");clearTimeout(window._toastTimer);window._toastTimer=setTimeout(()=>el.classList.add("hidden"),2600)}
 function navigate(page){const ids={home:"homePage",trip:"tripPage",explore:"explorePage",shopping:"shoppingPage",profile:"profilePage"};Object.entries(ids).forEach(([k,id])=>$("#"+id).classList.toggle("active",k===page));$$("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===page));$$("[data-link]").forEach(a=>a.classList.toggle("active",a.dataset.link===page));if(location.hash!=="#"+page)history.replaceState(null,"","#"+page);window.scrollTo({top:0,behavior:"smooth"})}
 function openModal(id){$("#"+id).classList.add("open")}function closeModal(id){$("#"+id).classList.remove("open")}
 function requireAuth(action){if(currentUser)return true;pendingAuthAction=action;openModal("authModal");return false}
 function updateProfile(){const name=currentUser?.name||"Jelajahi sebagai tamu",initial=currentUser?.name?.trim()?.[0]?.toUpperCase()||"G";["sideAvatar","composerAvatar","profileAvatar"].forEach(id=>$("#"+id).textContent=initial);$("#sideName").textContent=name;$("#sideSub").textContent=currentUser?"Profil demo · Browser ini":"Belum masuk ke akun";$("#profileName").textContent=name;$("#profileLocation").textContent=currentUser?.area||"Bali · Guest mode";$("#profileBio").textContent=currentUser?"Profil demo lokal. Konten dan data tidak tersinkron ke perangkat lain.":"Masuk untuk membuat profil, membagikan cerita, dan menyimpan hal yang Anda sukai.";$("#profileLogin").textContent=currentUser?"Profil demo aktif":"Masuk / Daftar";$("#profileLogin").disabled=!!currentUser;$("#loginBtn").textContent=currentUser?"Profil demo":"Masuk"}
+function renderExplore(){
+ const grid=$("#exploreGrid");if(!grid)return;
+ let items=exploreItems.filter(x=>exploreFilter==="all"||x.type===exploreFilter);
+ if(exploreSort==="popular")items.sort((a,b)=>b.pop-a.pop);
+ else if(exploreSort==="latest")items.sort((a,b)=>b.id-a.id);
+ else items.sort((a,b)=>(b.pop+(b.type==="community"?3:0))-(a.pop+(a.type==="community"?3:0)));
+ grid.innerHTML="";
+ items.forEach(item=>{
+  const btn=document.createElement("button");btn.className="explore-post";btn.type="button";btn.dataset.exploreId=item.id;
+  btn.innerHTML='<span class="explore-type">'+escapeHtml(item.label)+'</span><span class="explore-popularity">♡ '+item.pop+' · demo</span><img src="'+item.image+'" alt="'+escapeHtml(item.caption)+'" loading="lazy"><span class="explore-overlay"><strong>'+escapeHtml(item.creator)+'</strong><small>'+escapeHtml(item.source)+'</small></span>';
+  grid.appendChild(btn);
+ });
+ $("#exploreCount").textContent=items.length+" konten contoh · Demo";
+ $("#exploreEmpty").classList.toggle("hidden",items.length>0);
+}
+function openExploreDetail(id){
+ const item=exploreItems.find(x=>x.id===Number(id));if(!item)return;pendingExploreItem=item;
+ $("#exploreDetailTitle").textContent=item.creator;$("#exploreDetailImage").src=item.image;$("#exploreDetailImage").alt=item.creator;
+ $("#exploreDetailSource").textContent=item.source+" · "+item.label;$("#exploreDetailCopy").textContent=item.caption;
+ $("#exploreInternalLink").textContent=item.targetLabel;openModal("exploreDetailModal");
+}
 function renderFeed(){const list=$("#feedList");const visible=posts.filter(p=>p.surface==="feed"&&(activeFilter==="all"||p.type===activeFilter));list.innerHTML="";if(!visible.length){list.innerHTML='<div class="card empty-state"><b>Belum ada cerita di kategori ini</b><p>Konten akan muncul ketika komunitas dan penyedia lokal mulai berbagi.</p></div>';return}visible.forEach(p=>{const el=document.createElement("article");el.className="card post";const media=p.media?(p.mediaType?.startsWith("video")?'<video class="post-media" controls playsinline src="'+p.media+'"></video>':'<img class="post-media" src="'+p.media+'" alt="Media postingan">'):'<div class="post-media placeholder">✳</div>';el.innerHTML='<div class="post-head"><div class="avatar">'+escapeHtml(p.initial||p.user[0])+'</div><div class="post-user"><strong>'+escapeHtml(p.user)+'</strong><small>'+escapeHtml(p.time)+'</small></div><span class="post-kind">'+escapeHtml(p.kind||"Komunitas")+'</span><button class="more" aria-label="Lainnya">···</button></div><div class="post-copy">'+escapeHtml(p.text)+'</div>'+media+'<div class="post-location">⌖ '+escapeHtml(p.location||"Bali")+(p.demo?' · Konten contoh':'')+'</div><div class="post-actions"><button class="action '+(p.liked?'liked':'')+'" data-like="'+p.id+'">♡ '+p.likes+'</button><button class="action" data-comment="'+p.id+'">◯ Komentar</button><button class="action" data-share="'+p.id+'">↗ Bagikan</button><button class="action save" data-save="'+p.id+'">♧ Simpan</button></div><div class="post-foot">'+(p.type==="trip"?"Trip Plan · Rencana, bukan bukti kunjungan":p.type==="experience"?"Trip Experience · Bukti kunjungan belum terhubung":"Konten demo / komunitas")+'</div>';list.appendChild(el)});$("#myPostCount").textContent=posts.filter(p=>p.user===currentUser?.name&&!p.demo).length}
 function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function openComposer(surface="feed",type="general"){if(!requireAuth("create-post"))return;$("#postSurface").value=surface;$("#postType").value=type;$("#postText").value="";$("#mediaFile").value="";$("#mediaPreview").classList.add("hidden");selectedFile=null;openModal("composerModal")}
@@ -129,11 +209,15 @@ $("#sharePlanStory").addEventListener("click",()=>{closeModal("storyModal");open
 $$("[data-action]").forEach(b=>b.addEventListener("click",()=>{const a=b.dataset.action;if(a==="create-post")openComposer("trip","experience");else if(a==="create-trip"){if(requireAuth("create-trip")){toast("Pembuat Bali Plan akan dikembangkan pada tahap berikutnya.")}}else if(a==="trip-detail")toast("Detail rencana contoh akan dibangun pada tahap Trip berikutnya.");else if(a==="demo-info")toast("Katalog dan data penyedia belum aktif pada prototype.")}));
 $$("[data-auth]").forEach(b=>b.addEventListener("click",()=>{pendingAuthAction=b.dataset.auth;openModal("authModal")}));
 $$("[data-trip-tab]").forEach(b=>b.addEventListener("click",()=>{const t=b.dataset.tripTab;$$("[data-trip-tab]").forEach(x=>x.classList.toggle("active",x===b));$("#tripPlans").classList.toggle("hidden",t!=="plans");$("#tripExperiences").classList.toggle("hidden",t!=="experiences");$("#tripSaved").classList.toggle("hidden",t!=="saved")}));
-$$("[data-explore]").forEach(b=>b.addEventListener("click",()=>{ $$("[data-explore]").forEach(x=>x.classList.toggle("active",x===b));toast("Filter "+b.textContent+" akan terhubung dengan direktori bisnis.")}));
+$("[data-explore]").forEach(b=>b.addEventListener("click",()=>{exploreFilter=b.dataset.explore;$("[data-explore]").forEach(x=>x.classList.toggle("active",x===b));renderExplore()}));
+$("#exploreSort").addEventListener("change",e=>{exploreSort=e.target.value;renderExplore()});
+$("#exploreGrid").addEventListener("click",e=>{const tile=e.target.closest("[data-explore-id]");if(tile)openExploreDetail(tile.dataset.exploreId)});
+$("#exploreInternalLink").addEventListener("click",()=>{if(!pendingExploreItem)return;const target=pendingExploreItem.target;closeModal("exploreDetailModal");navigate(target);toast("Halaman "+pendingExploreItem.targetLabel+" masih berupa simulasi prototype.")});
+$("#exploreDetailProfile").addEventListener("click",()=>{closeModal("exploreDetailModal");navigate("profile")});
 $$("[data-shop]").forEach(b=>b.addEventListener("click",()=>{$$("[data-shop]").forEach(x=>x.classList.toggle("active",x===b));toast("Kategori "+b.textContent+" dipilih.")}));
 $("#inboxBtn").addEventListener("click",()=>{if(requireAuth("messages"))toast("Pesan belum diaktifkan pada prototype.")});
 $("#globalSearch").addEventListener("keydown",e=>{if(e.key==="Enter"){navigate("explore");toast("Pencarian direktori demo: "+e.target.value)}})
 try{const saved=sessionStorage.getItem("mybali_demo_user");if(saved)currentUser=JSON.parse(saved)}catch(e){}
-updateProfile();renderFeed();const initial=location.hash.replace("#","");if(["trip","explore","shopping","profile"].includes(initial))navigate(initial);
+updateProfile();renderFeed();renderExplore();const initial=location.hash.replace("#","");if(["trip","explore","shopping","profile"].includes(initial))navigate(initial);
 </script>
 </body></html>
