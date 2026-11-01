@@ -26,7 +26,15 @@ Questions are not decisions. Resolve them only with evidence and explicit founde
 - [ ] How should new-user interest onboarding work, and how can preferences be changed?
 - [ ] What is the distinction between curated information, official provider content, user posts, and sponsored placement?
 
-## Public web, account, and community\n- [ ] Define secure production authentication, account recovery, and cross-device session management.\n- [ ] Decide which public product, provider, and destination pages are indexable and how each page is maintained.\n- [ ] Decide public versus followers-only versus private post visibility and default audience.\n- [ ] Define post reporting, moderation, appeals, upload security, storage, and deletion/retention rules.\n- [ ] Confirm whether age is necessary to collect and set a minimum-age policy before production.\n- [ ] Choose backend, database, object storage, and deployment architecture.\n\n## Provider ecosystem and verification
+## Public web, account, and community
+- [ ] Define secure production authentication, account recovery, and cross-device session management.
+- [ ] Decide which public product, provider, and destination pages are indexable and how each page is maintained.
+- [ ] Decide public versus followers-only versus private post visibility and default audience.
+- [ ] Define post reporting, moderation, appeals, upload security, storage, and deletion/retention rules.
+- [ ] Confirm whether age is necessary to collect and set a minimum-age policy before production.
+- [ ] Choose backend, database, object storage, and deployment architecture.
+
+## Provider ecosystem and verification
 - [ ] Define owner/authorized representative evidence and category-specific verification.
 - [ ] Define storefront versus mobile/appointment-based provider eligibility.
 - [ ] Define real-location verification, site visits, and response to fictitious addresses.
