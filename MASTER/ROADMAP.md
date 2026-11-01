@@ -9,9 +9,14 @@
 - Consolidate provider, transport, marketplace, pricing, trust, and UI/UX principles.
 - Validate core user problems and provider willingness to participate.
 - Define privacy, safety, age suitability, moderation, legal, and operational principles.
+- Establish the social-first product structure: Feed, Stories/Status, Trip, Bali Plan, Trip Experience, and Explore.
+- Separate general user-generated content from system-backed experience records.
 
 ## Stage 1 — Trust and useful local foundation
 - Define user identity, profiles, preferences, saved places, and private records.
+- Design the mixed photo/video social feed, Stories/Status, audience controls, and guest browsing boundaries.
+- Define Trip Plan sharing separately from actual Trip Experience and booking/transaction states.
+- Define evidence-linked Experience Posts, source-record correction, audit history, copyright reporting, and content moderation.
 - Define provider registration, identity/authority checks, real-location verification, and category-specific evidence.
 - Establish verified, pending, restricted, and suspended provider states.
 - Define provider support, complaints, appeals, and ongoing review.
