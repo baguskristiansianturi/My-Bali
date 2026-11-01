@@ -134,3 +134,31 @@ A future physical office in Bali is a possible trust and operations asset for on
 
 ## 15. Open scope
 Launch sequence, exact service families, provider evidence, transport SOPs, insurance, payment and settlement, commission, shopping restrictions, privacy, moderation, age policy, office operations, and system architecture remain to be designed.
+
+## 16. Social-first product identity
+
+**Founder direction captured (2026-11-02):** My Bali's primary product character is social media. It is not a directory or travel-booking product with social features added afterward. The social layer is the main way people discover, share, discuss, and follow life and businesses in Bali; the local provider and service ecosystem is connected inside that experience.
+
+The primary social feed supports mixed photo and video posts. Posts may be about trips, Bali businesses, destinations, food, everyday life, or other permitted topics; a post does not have to be related to a trip. The exact feed ranking and navigation remain design decisions.
+
+The Trip area is a distinct experience within the platform. **Bali Plan** is a Trip sub-area for pre-travel planning: draft itineraries, intended hotels, destinations, restaurants, interests, estimated budgets, and places a user hopes to visit. **Trip Experience** records experiences that have actually occurred. A plan must never be represented as a completed visit.
+
+A user may share a Trip Plan to the main feed, share it only to Stories/Status, share it with selected audiences, or keep it private. Users may also control visibility of saved places and interests independently from general profile visibility. Sharing a plan does not itself create a booking or prove a future visit.
+
+Stories/Status are a separate temporary-sharing surface and should not automatically appear in the permanent feed. Users may choose to cross-post where appropriate. General photo/video posts remain possible outside Trip.
+
+## 17. Evidence-linked experience publishing
+
+My Bali should distinguish ordinary user-authored social content from system-backed activity records. An eligible completed transaction, provider-confirmed booking, or other validated activity may offer the user an option to publish an **Experience Post** linked to that record.
+
+The system-backed facts (such as provider identity, transaction/activity reference, event time, and verified status) must come from the relevant My Bali records and must not be silently rewritten by the user. User-authored media, caption, and optional commentary remain separate from those facts. Corrections to source records require an auditable correction/dispute process, not silent editing. The record must also be privacy-controlled: the user chooses whether to publish it, and sensitive details such as payment credentials, full receipt data, exact private addresses, and order identifiers are not exposed publicly.
+
+A completed payment alone does not prove a physical visit or quality of experience. Experience labels must accurately describe the evidence available (for example, paid order, provider-confirmed visit, booking completed, or user-submitted story). GPS presence alone is not proof of purchase or attendance.
+
+## 18. Copyright and user-generated content
+
+My Bali may use familiar social-media interaction patterns, but it must use its own visual identity, interaction details, brand assets, and original interface composition. Familiar product conventions do not grant permission to copy another platform's protected code, graphics, branding, text, or distinctive creative assets.
+
+Users should upload content they created or have permission to use. The platform should provide clear rights declarations, reporting and takedown procedures, repeat-infringer handling, and an appeal/counter-notice process appropriate to applicable law. Music and other licensed media should be limited to sources for which My Bali has the necessary platform rights. Do not assume that crediting the original creator, cropping, adding a filter, or using a short clip automatically makes reuse lawful.
+
+No platform can guarantee that user uploads will never trigger a copyright complaint. My Bali must have a practical process to receive, assess, restrict, remove, and review disputed content.
