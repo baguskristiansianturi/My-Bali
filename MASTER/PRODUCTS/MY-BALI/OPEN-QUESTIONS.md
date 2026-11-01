@@ -83,3 +83,17 @@ Questions are not decisions. Resolve them only with evidence and explicit founde
 - [ ] Define provider and customer support operations.
 - [ ] Define sustainable revenue model and fairness safeguards.
 - [ ] Set launch scope, validation milestones, and outcome metrics.
+
+## Social-first feed, Trip and content integrity
+
+- [ ] Confirm final primary navigation labels and order for Feed, Trip, Bali Plan, Stories/Status, and Explore.
+- [ ] Define mixed-feed ranking, location/interests relevance, freshness, user controls, and promotion frequency.
+- [ ] Decide whether the default feed includes public posts from people, businesses, and destinations the user does not follow.
+- [ ] Define the Trip Plan data model and which fields can be shared publicly, with followers, or privately.
+- [ ] Define Story/Status lifetime, archive behavior, audience controls, and explicit cross-posting to Feed.
+- [ ] Define evidence levels that qualify an activity for an Experience Post (paid order, provider confirmation, completed booking, check-in, or other evidence).
+- [ ] Define immutable system facts, correction/dispute permissions, edit history, and retention for evidence-linked posts.
+- [ ] Define copyright policy, rights declarations, licensed music/media sources, reporting, takedown, appeal/counter-notice, and repeat-infringer handling.
+- [ ] Decide whether Trip Plan updates and completed Trip Experiences can appear in one profile timeline while remaining clearly labeled.
+- [ ] Define what business content is organic, what is sponsored, and how paid placement is disclosed.
+
